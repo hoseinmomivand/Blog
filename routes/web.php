@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->resource('categories',CategoryController::class);
-Route::middleware('auth')->resource('postcontroller',PostController::class);
+Route::middleware('auth')->resource('post',PostController::class);
+route::middleware('auth')->resource('user',UserController::class);
 require __DIR__.'/auth.php';
